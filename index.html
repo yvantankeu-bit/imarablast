@@ -7,43 +7,45 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #0f172a; font-size: 0.875rem; line-height: 1.5; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #0f172a; font-size: 1rem; line-height: 1.6; }
 
-    nav { border-bottom: 1px solid #e2e8f0; padding: 0 24px; height: 44px; display: flex; align-items: center; justify-content: space-between; background: #ffffff; }
-    nav .brand { font-size: 0.875rem; font-weight: 600; color: #0f172a; display: flex; align-items: center; gap: 6px; }
+    nav { border-bottom: 1px solid #e2e8f0; padding: 0 28px; height: 52px; display: flex; align-items: center; justify-content: space-between; background: #ffffff; }
+    nav .brand { font-size: 1rem; font-weight: 600; color: #0f172a; display: flex; align-items: center; gap: 8px; }
     nav .links { display: flex; gap: 4px; }
-    nav .links a { font-size: 0.75rem; color: #475569; text-decoration: none; padding: 4px 10px; border-radius: 4px; }
+    nav .links a { font-size: 0.875rem; color: #475569; text-decoration: none; padding: 6px 12px; border-radius: 4px; }
     nav .links a:hover { background: #f1f5f9; color: #0f172a; }
 
-    .container { max-width: 760px; margin: 0 auto; padding: 40px 24px; }
+    .container { max-width: 820px; margin: 0 auto; padding: 52px 28px; }
 
-    .header { margin-bottom: 32px; }
-    .header h1 { font-size: 1.125rem; font-weight: 600; color: #0f172a; }
-    .header p { font-size: 0.75rem; color: #475569; margin-top: 4px; }
+    .header { margin-bottom: 40px; }
+    .header h1 { font-size: 1.375rem; font-weight: 600; color: #0f172a; }
+    .header p { font-size: 0.9375rem; color: #475569; margin-top: 6px; }
 
-    .divider { height: 1px; background: #e2e8f0; margin: 28px 0; }
+    .divider { height: 1px; background: #e2e8f0; margin: 36px 0; }
 
-    .section-label { font-size: 0.75rem; font-weight: 500; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+    .section-label { font-size: 0.8125rem; font-weight: 500; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
 
-    .platform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .platform-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 16px; }
-    .platform-card .top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-    .platform-card .icon { width: 28px; height: 28px; background: #f1f5f9; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #475569; flex-shrink: 0; }
-    .platform-card h3 { font-size: 0.875rem; font-weight: 500; color: #0f172a; }
-    .platform-card p { font-size: 0.75rem; color: #94a3b8; line-height: 1.4; }
-    .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.7rem; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; border-radius: 3px; padding: 2px 6px; margin-top: 10px; }
+    .platform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .platform-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; }
+    .platform-card .top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .platform-card .logo { width: 36px; height: 36px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .platform-card .logo img { width: 20px; height: 20px; }
+    .platform-card h3 { font-size: 1rem; font-weight: 500; color: #0f172a; }
+    .platform-card p { font-size: 0.875rem; color: #64748b; line-height: 1.5; }
+    .badge { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8125rem; background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; border-radius: 4px; padding: 3px 8px; margin-top: 12px; }
     .badge.active { background: #0f172a; color: #f8fafc; border-color: #0f172a; }
+    .badge i { width: 12px; height: 12px; }
 
     .tech-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .tech-tag { font-size: 0.7rem; color: #475569; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 3px; padding: 2px 8px; }
+    .tech-tag { font-size: 0.8125rem; color: #475569; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 4px 10px; }
 
-    footer { border-top: 1px solid #e2e8f0; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
-    footer span { font-size: 0.75rem; color: #94a3b8; }
-    footer div { display: flex; gap: 16px; }
-    footer a { font-size: 0.75rem; color: #94a3b8; text-decoration: none; }
+    footer { border-top: 1px solid #e2e8f0; padding: 20px 28px; display: flex; justify-content: space-between; align-items: center; }
+    footer span { font-size: 0.875rem; color: #94a3b8; }
+    footer div { display: flex; gap: 20px; }
+    footer a { font-size: 0.875rem; color: #94a3b8; text-decoration: none; }
     footer a:hover { color: #0f172a; }
 
-    i[data-lucide] { width: 14px; height: 14px; }
+    nav i[data-lucide] { width: 16px; height: 16px; }
   </style>
 </head>
 <body>
@@ -71,7 +73,9 @@
 
     <div class="platform-card">
       <div class="top">
-        <div class="icon"><i data-lucide="facebook"></i></div>
+        <div class="logo">
+          <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook">
+        </div>
         <h3>Facebook</h3>
       </div>
       <p>Publishes photos and videos directly to a Facebook Page via the Graph API.</p>
@@ -80,7 +84,9 @@
 
     <div class="platform-card">
       <div class="top">
-        <div class="icon"><i data-lucide="instagram"></i></div>
+        <div class="logo">
+          <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram">
+        </div>
         <h3>Instagram</h3>
       </div>
       <p>Publishes images and Reels to an Instagram Business account via resumable upload.</p>
@@ -89,7 +95,9 @@
 
     <div class="platform-card">
       <div class="top">
-        <div class="icon"><i data-lucide="music"></i></div>
+        <div class="logo">
+          <img src="https://cdn.simpleicons.org/tiktok/000000" alt="TikTok">
+        </div>
         <h3>TikTok</h3>
       </div>
       <p>Uploads and publishes short videos via the TikTok Content Posting API.</p>
@@ -98,7 +106,9 @@
 
     <div class="platform-card">
       <div class="top">
-        <div class="icon"><i data-lucide="twitter"></i></div>
+        <div class="logo">
+          <img src="https://cdn.simpleicons.org/x/000000" alt="X">
+        </div>
         <h3>Twitter / X</h3>
       </div>
       <p>Posts images and videos via the X API v2 using OAuth 1.0a.</p>

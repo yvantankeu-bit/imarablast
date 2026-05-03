@@ -7,38 +7,39 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #0f172a; font-size: 0.875rem; line-height: 1.6; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #0f172a; font-size: 1rem; line-height: 1.7; }
 
-    nav { border-bottom: 1px solid #e2e8f0; padding: 0 24px; height: 44px; display: flex; align-items: center; justify-content: space-between; background: #ffffff; }
-    nav .brand { font-size: 0.875rem; font-weight: 600; color: #0f172a; display: flex; align-items: center; gap: 6px; text-decoration: none; }
+    nav { border-bottom: 1px solid #e2e8f0; padding: 0 28px; height: 52px; display: flex; align-items: center; justify-content: space-between; background: #ffffff; }
+    nav .brand { font-size: 1rem; font-weight: 600; color: #0f172a; display: flex; align-items: center; gap: 8px; text-decoration: none; }
     nav .links { display: flex; gap: 4px; }
-    nav .links a { font-size: 0.75rem; color: #475569; text-decoration: none; padding: 4px 10px; border-radius: 4px; }
+    nav .links a { font-size: 0.875rem; color: #475569; text-decoration: none; padding: 6px 12px; border-radius: 4px; }
     nav .links a:hover { background: #f1f5f9; color: #0f172a; }
     nav .links a.active { background: #0f172a; color: #f8fafc; }
 
-    .container { max-width: 640px; margin: 0 auto; padding: 40px 24px 60px; }
+    .container { max-width: 680px; margin: 0 auto; padding: 48px 28px 72px; }
 
-    .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #94a3b8; margin-bottom: 24px; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 0.875rem; color: #94a3b8; margin-bottom: 28px; }
     .breadcrumb a { color: #94a3b8; text-decoration: none; }
     .breadcrumb a:hover { color: #0f172a; }
+    .breadcrumb i { width: 14px; height: 14px; }
 
-    .page-header { margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
-    .page-header h1 { font-size: 1rem; font-weight: 600; color: #0f172a; }
-    .page-header span { font-size: 0.75rem; color: #94a3b8; margin-top: 4px; display: block; }
+    .page-header { margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0; }
+    .page-header h1 { font-size: 1.25rem; font-weight: 600; color: #0f172a; }
+    .page-header span { font-size: 0.875rem; color: #94a3b8; margin-top: 6px; display: block; }
 
-    h2 { font-size: 0.75rem; font-weight: 600; color: #0f172a; text-transform: uppercase; letter-spacing: 0.05em; margin: 28px 0 10px; }
-    p { font-size: 0.875rem; color: #475569; margin-bottom: 10px; }
-    ul { padding-left: 16px; margin-bottom: 10px; }
-    ul li { font-size: 0.875rem; color: #475569; margin-bottom: 4px; }
+    h2 { font-size: 0.8125rem; font-weight: 600; color: #0f172a; text-transform: uppercase; letter-spacing: 0.06em; margin: 32px 0 12px; }
+    p { font-size: 0.9375rem; color: #475569; margin-bottom: 12px; }
+    ul { padding-left: 18px; margin-bottom: 12px; }
+    ul li { font-size: 0.9375rem; color: #475569; margin-bottom: 5px; }
     a { color: #0f172a; }
 
-    footer { border-top: 1px solid #e2e8f0; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
-    footer span { font-size: 0.75rem; color: #94a3b8; }
-    footer div { display: flex; gap: 16px; }
-    footer a { font-size: 0.75rem; color: #94a3b8; text-decoration: none; }
+    footer { border-top: 1px solid #e2e8f0; padding: 20px 28px; display: flex; justify-content: space-between; align-items: center; }
+    footer span { font-size: 0.875rem; color: #94a3b8; }
+    footer div { display: flex; gap: 20px; }
+    footer a { font-size: 0.875rem; color: #94a3b8; text-decoration: none; }
     footer a:hover { color: #0f172a; }
 
-    i[data-lucide] { width: 14px; height: 14px; }
+    nav i[data-lucide] { width: 16px; height: 16px; }
   </style>
 </head>
 <body>
